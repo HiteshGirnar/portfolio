@@ -226,7 +226,7 @@ height:100%;
 object-fit:cover;
 object-position:top;
 display:block;
-filter:grayscale(90%) contrast(1.15) brightness(1.15);
+filter:grayscale(0%) contrast(1.05) brightness(0.95);
 transition: filter 0.4s ease;
 }
 // .profile-img:hover {
