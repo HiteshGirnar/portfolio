@@ -67,8 +67,10 @@ export default function Research() {
                   <Users size={14} className="text-emerald" />
                   <strong>Author:</strong> {paper.coAuthors}
                 </span>
-                <span className="rs-dot">•</span>
-                <span className="rs-venue-text">{paper.venue}</span>
+                <span className="rs-venue-item">
+                  <BookOpen size={13} className="text-cyan" />
+                  <span className="rs-venue-text">{paper.venue}</span>
+                </span>
               </div>
 
               {/* Research Metrics Strip */}
@@ -184,20 +186,17 @@ export default function Research() {
           display: flex;
           align-items: center;
           flex-wrap: wrap;
-          gap: 0.65rem;
+          gap: 0.75rem 1.25rem;
           font-size: 0.88rem;
           color: var(--text-secondary);
           margin-bottom: 1.75rem;
         }
 
-        .rs-author-item {
+        .rs-author-item,
+        .rs-venue-item {
           display: inline-flex;
           align-items: center;
-          gap: 0.35rem;
-        }
-
-        .rs-dot {
-          color: var(--text-muted);
+          gap: 0.45rem;
         }
 
         .rs-venue-text {
@@ -275,10 +274,55 @@ export default function Research() {
 
         @media (max-width: 768px) {
           .rs-card {
-            padding: 1.5rem;
+            padding: 1.35rem 1.15rem;
+            border-radius: var(--radius-lg);
+          }
+          .rs-head {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.85rem;
+          }
+          .rs-read-btn {
+            width: 100%;
+            justify-content: center;
+          }
+          .rs-title {
+            font-size: 1.3rem;
+            line-height: 1.3;
+          }
+          .rs-author-strip {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.45rem;
+            margin-bottom: 1.25rem;
           }
           .rs-metrics-grid {
             grid-template-columns: repeat(2, 1fr);
+            gap: 0.65rem;
+          }
+          .rs-metric-box {
+            padding: 0.75rem 0.5rem;
+            min-height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .rs-metric-val {
+            font-size: 1.05rem;
+            line-height: 1.2;
+            word-break: break-word;
+          }
+          .rs-metric-lbl {
+            font-size: 0.64rem;
+            line-height: 1.35;
+            letter-spacing: 0.02em;
+          }
+          .rs-abstract-wrap {
+            padding: 1rem 1.15rem;
+          }
+          .rs-abstract-text {
+            font-size: 0.88rem;
+            line-height: 1.6;
           }
         }
       `}</style>

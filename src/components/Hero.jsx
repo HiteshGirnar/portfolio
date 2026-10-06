@@ -529,28 +529,64 @@ export default function Hero() {
 
         @media (max-width: 600px) {
           .hero-section {
-            padding-top: calc(var(--navbar-height) + 2rem);
+            padding-top: calc(var(--navbar-height) + 1.25rem);
+            padding-bottom: 3.5rem;
           }
           .hero-heading {
-            font-size: 2.15rem;
+            font-size: 1.85rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+          }
+          .hero-description {
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
           }
           .hero-stats-grid {
             grid-template-columns: repeat(2, 1fr);
+            gap: 0.65rem;
             width: 100%;
           }
+          .hero-stat-card {
+            padding: 0.7rem 0.5rem;
+          }
+          .hero-stat-val {
+            font-size: 1.25rem;
+          }
+          .hero-stat-lbl {
+            font-size: 0.68rem;
+          }
           .hero-card-perspective {
-            width: 270px;
-            height: 340px;
+            width: 250px;
+            height: 315px;
+          }
+          .hero-floating-badge {
+            font-size: 0.72rem;
+            padding: 0.35rem 0.65rem;
+            gap: 0.35rem;
           }
           .badge-top-left {
-            left: -10px;
             top: -10px;
+            left: 0px;
           }
           .badge-top-right {
-            right: -15px;
+            top: 28%;
+            right: -10px;
           }
           .badge-bottom-right {
-            left: -10px;
+            bottom: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: none;
+          }
+          .hero-id-strip {
+            bottom: 8px;
+            left: 10px;
+            right: 10px;
+            padding: 0.32rem 0.6rem;
+          }
+          .hero-id-text {
+            font-size: 0.65rem;
           }
         }
       `}</style>

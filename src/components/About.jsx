@@ -282,8 +282,13 @@ export default function About() {
         }
 
         .ab-edu-icon-wrap {
-          width: 48px;
-          height: 48px;
+          width: 44px;
+          height: 44px;
+          min-width: 44px;
+          min-height: 44px;
+          flex-shrink: 0;
+          align-self: flex-start;
+          margin-top: 3px;
           border-radius: var(--radius-md);
           background: rgba(16, 185, 129, 0.12);
           border: 1px solid rgba(16, 185, 129, 0.3);
@@ -318,6 +323,8 @@ export default function About() {
           display: flex;
           justify-content: space-between;
           align-items: center;
+          flex-wrap: wrap;
+          gap: 0.5rem;
           margin-bottom: 0.75rem;
         }
 
@@ -335,10 +342,12 @@ export default function About() {
         .ab-edu-period {
           display: inline-flex;
           align-items: center;
-          gap: 0.3rem;
+          gap: 0.35rem;
           font-family: var(--font-mono);
-          font-size: 0.78rem;
+          font-size: 0.76rem;
           color: var(--text-muted);
+          white-space: nowrap;
+          flex-shrink: 0;
         }
 
         .ab-edu-degree {
@@ -358,7 +367,9 @@ export default function About() {
         .ab-edu-meta {
           display: flex;
           align-items: center;
-          gap: 1rem;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 0.65rem;
           margin-bottom: 0.85rem;
         }
 
@@ -393,8 +404,21 @@ export default function About() {
         }
 
         @media (max-width: 768px) {
+          .ab-story-card, .ab-pillars-card {
+            padding: 1.5rem 1.25rem;
+          }
+          .ab-edu-card {
+            padding: 1.5rem 1.25rem;
+          }
           .ab-edu-grid {
             grid-template-columns: 1fr;
+            gap: 1.25rem;
+          }
+          .ab-edu-item {
+            padding: 1.25rem 1rem;
+          }
+          .ab-edu-degree {
+            font-size: 1.05rem;
           }
         }
       `}</style>

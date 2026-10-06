@@ -201,6 +201,10 @@ export default function Certifications() {
         @media (max-width: 680px) {
           .cert-grid {
             grid-template-columns: 1fr;
+            gap: 1.15rem;
+          }
+          .cert-card {
+            padding: 1.35rem 1.15rem;
           }
         }
       `}</style>
