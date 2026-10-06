@@ -1,244 +1,246 @@
 import React from "react";
-import { ArrowUp, Heart, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowUp, Github, Linkedin, Mail, Twitter, Brain, Heart, Sparkles } from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
-
-const quickLinks = [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Research", href: "#research" },
-];
 
 export default function Footer() {
   const { personalInfo } = portfolioData;
+
+  const quickLinks = [
+    { label: "About", href: "#about" },
+    { label: "Skills", href: "#skills" },
+    { label: "Projects", href: "#projects" },
+    { label: "Research", href: "#research" },
+    { label: "Certifications", href: "#certifications" },
+    { label: "Contact", href: "#contact" }
+  ];
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <footer className="footer-wrap">
-      <div className="container footer-top">
-        <div className="footer-brand">
-          <a href="#home" className="brand-logo">
-            <span className="brand-name">Hitesh</span>
-            <span className="brand-colon">.</span>
-            <span className="brand-last">Jain</span>
+    <footer className="ft-wrap">
+      <div className="container ft-top">
+        <div className="ft-brand">
+          <a href="#home" className="ft-logo">
+            <span className="text-emerald">&lt;</span>
+            <span className="ft-logo-name">HITESH JAIN</span>
+            <span className="text-cyan">/&gt;</span>
           </a>
-          <p className="footer-subtext">
-            Artificial Intelligence &amp; Machine Learning Portfolio
+          <p className="ft-sub">
+            Artificial Intelligence, Deep Learning &amp; Modern Full-Stack Engineering.
           </p>
+          <div className="ft-live-status">
+            <span className="status-dot" />
+            <span>Open to opportunities in Bengaluru &amp; Remote</span>
+          </div>
         </div>
 
-        <nav className="footer-links" aria-label="Footer navigation">
-          {quickLinks.map((link) => (
-            <a key={link.href} href={link.href} className="footer-link">
-              {link.label}
-            </a>
-          ))}
+        <nav className="ft-nav" aria-label="Footer Navigation">
+          <span className="ft-col-title">Navigation</span>
+          <div className="ft-links-grid">
+            {quickLinks.map((link) => (
+              <a key={link.href} href={link.href} className="ft-link">
+                {link.label}
+              </a>
+            ))}
+          </div>
         </nav>
 
-        <div className="footer-socials">
-          <a
-            href={personalInfo.socials.github}
-            target="_blank"
-            rel="noreferrer"
-            className="footer-soc-icon"
-            aria-label="GitHub"
-          >
-            <Github size={17} />
-          </a>
-          <a
-            href={personalInfo.socials.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            className="footer-soc-icon"
-            aria-label="LinkedIn"
-          >
-            <Linkedin size={17} />
-          </a>
-          <a
-            href={`mailto:${personalInfo.socials.email}`}
-            className="footer-soc-icon"
-            aria-label="Email"
-          >
-            <Mail size={17} />
-          </a>
+        <div className="ft-channels">
+          <span className="ft-col-title">Connect</span>
+          <div className="ft-social-icons">
+            <a
+              href={personalInfo.socials.github}
+              target="_blank"
+              rel="noreferrer"
+              className="icon-btn"
+              title="GitHub"
+            >
+              <Github size={17} />
+            </a>
+            <a
+              href={personalInfo.socials.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="icon-btn"
+              title="LinkedIn"
+            >
+              <Linkedin size={17} />
+            </a>
+            <a
+              href={personalInfo.socials.twitter || "#"}
+              target="_blank"
+              rel="noreferrer"
+              className="icon-btn"
+              title="Twitter"
+            >
+              <Twitter size={17} />
+            </a>
+            <a
+              href={`mailto:${personalInfo.socials.email}`}
+              className="icon-btn"
+              title="Email"
+            >
+              <Mail size={17} />
+            </a>
+          </div>
         </div>
       </div>
 
-      <div className="footer-divider"></div>
+      <div className="ft-divider-line" />
 
-      <div className="container footer-bottom">
-        <p className="copyright-text">
-          © {new Date().getFullYear()} Hitesh Jain. Made with{" "}
-          <Heart size={13} className="heart-icon" /> and a lot of coffee.
+      <div className="container ft-bottom">
+        <p className="ft-copy">
+          © {new Date().getFullYear()} Hitesh Jain. Engineered with React &amp; Three.js.
         </p>
 
         <button
           onClick={scrollToTop}
-          className="back-to-top-btn"
-          aria-label="Back to top"
-          title="Back to top"
+          className="ft-top-btn"
+          aria-label="Scroll to top"
+          title="Scroll to top"
         >
-          <ArrowUp size={18} />
+          <span>Top</span>
+          <ArrowUp size={15} />
         </button>
       </div>
 
       <style>{`
+        .ft-wrap {
+          border-top: 1px solid var(--divider-color);
+          background: rgba(7, 9, 14, 0.95);
+          padding-top: 4rem;
+          padding-bottom: 2rem;
+          position: relative;
+          z-index: 2;
+        }
 
-.footer-wrap {
-  border-top: 1px solid var(--divider-color, var(--glass-border));
-  background: var(--bg-secondary);
-  padding-top: 3rem;
-}
+        [data-theme="light"] .ft-wrap {
+          background: rgba(248, 250, 252, 0.98);
+        }
 
-.footer-top {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr auto;
-  align-items: start;
-  gap: 2rem;
-  padding-bottom: 2.25rem;
-}
+        .ft-top {
+          display: grid;
+          grid-template-columns: 1.5fr 1fr 1fr;
+          gap: 3rem;
+          margin-bottom: 3rem;
+        }
 
-.footer-brand {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
+        .ft-logo {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.25rem;
+          font-family: var(--font-mono);
+          font-size: 1.2rem;
+          font-weight: 800;
+          color: var(--text-primary);
+          margin-bottom: 0.85rem;
+        }
 
-.brand-logo {
-  font-family: var(--font-heading);
-  font-size: 1.3rem;
-  font-weight: 700;
-  display: inline-flex;
-  align-items: baseline;
-  width: fit-content;
-}
+        .ft-logo-name {
+          letter-spacing: 0.08em;
+          background: var(--gradient-heading);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
 
-.brand-name { color: var(--text-primary); }
-.brand-colon { color: var(--accent-green); margin: 0 0.05em; }
-.brand-last { color: var(--text-secondary); font-weight: 500; }
+        .ft-sub {
+          font-size: 0.92rem;
+          color: var(--text-secondary);
+          line-height: 1.6;
+          max-width: 340px;
+          margin-bottom: 1.25rem;
+        }
 
-.footer-subtext {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  max-width: 320px;
-  line-height: 1.5;
-}
+        .ft-live-status {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-family: var(--font-mono);
+          font-size: 0.76rem;
+          color: var(--accent-emerald-light);
+          background: rgba(16, 185, 129, 0.08);
+          border: 1px solid rgba(16, 185, 129, 0.25);
+          padding: 0.3rem 0.85rem;
+          border-radius: var(--radius-full);
+        }
 
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-  padding-top: 0.3rem;
-}
+        .ft-col-title {
+          display: block;
+          font-family: var(--font-mono);
+          font-size: 0.74rem;
+          font-weight: 700;
+          color: var(--text-muted);
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          margin-bottom: 1.15rem;
+        }
 
-.footer-link {
-  font-size: 0.88rem;
-  color: var(--text-secondary);
-  width: fit-content;
-  transition: color var(--transition-fast, 0.15s ease);
-}
+        .ft-links-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 0.65rem 1rem;
+        }
 
-.footer-link:hover { color: var(--text-primary); }
+        .ft-link {
+          font-size: 0.88rem;
+          color: var(--text-secondary);
+          transition: color var(--transition-fast);
+        }
+        .ft-link:hover {
+          color: var(--accent-emerald-light);
+        }
 
-.footer-socials {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  justify-self: end;
-}
+        .ft-social-icons {
+          display: flex;
+          align-items: center;
+          gap: 0.65rem;
+        }
 
-.footer-soc-icon {
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--glass-border);
-  color: var(--text-secondary);
-  transition: all var(--transition-fast, 0.15s ease);
-}
+        .ft-divider-line {
+          width: 100%;
+          height: 1px;
+          background: var(--glass-border);
+          margin-bottom: 1.75rem;
+        }
 
-.footer-soc-icon:hover {
-  color: var(--text-primary);
-  border-color: var(--glass-border-hover);
-  background: var(--bg-card);
-  transform: translateY(-2px);
-}
+        .ft-bottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 0.85rem;
+          color: var(--text-muted);
+        }
 
-.footer-divider {
-  border-top: 1px solid var(--divider-color, var(--glass-border));
-}
+        .ft-top-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.45rem;
+          font-family: var(--font-mono);
+          font-size: 0.8rem;
+          font-weight: 600;
+          color: var(--text-secondary);
+          background: rgba(14, 20, 34, 0.8);
+          border: 1px solid var(--glass-border);
+          padding: 0.45rem 0.95rem;
+          border-radius: var(--radius-full);
+          cursor: pointer;
+          transition: all var(--transition-fast);
+        }
+        .ft-top-btn:hover {
+          color: var(--text-primary);
+          border-color: var(--accent-emerald);
+          box-shadow: 0 0 16px rgba(16, 185, 129, 0.3);
+          transform: translateY(-2px);
+        }
 
-.footer-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem 1.5rem;
-}
-
-.copyright-text {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  flex-wrap: wrap;
-}
-
-.heart-icon {
-  color: #ef4444;
-  fill: #ef4444;
-  flex-shrink: 0;
-}
-
-.back-to-top-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--bg-card);
-  border: 1px solid var(--glass-border);
-  color: var(--text-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  flex-shrink: 0;
-}
-
-.back-to-top-btn:hover {
-  background: var(--accent-green);
-  color: #06170d;
-  border-color: var(--accent-green);
-  transform: translateY(-3px);
-  box-shadow: 0 4px 15px rgba(74, 222, 128, 0.35);
-}
-
-@media (max-width: 768px) {
-  .footer-top {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding-bottom: 1.75rem;
-  }
-
-  .footer-brand { align-items: center; }
-  .footer-links { align-items: center; }
-  .footer-link { width: auto; }
-  .footer-socials { justify-self: center; }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-  }
-
-  .copyright-text { justify-content: center; }
-}
-
+        @media (max-width: 850px) {
+          .ft-top {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+          }
+        }
       `}</style>
     </footer>
   );

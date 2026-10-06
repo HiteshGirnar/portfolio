@@ -25,13 +25,13 @@ export default function Experience() {
                     <h4 className="ex-company">{exp.company}</h4>
                   </div>
                   <div className="ex-meta">
-                    <span className="ex-pill"><Calendar size={12}/> {exp.period}</span>
-                    <span className="ex-pill"><MapPin size={12}/> {exp.location}</span>
+                    <span className="ex-pill"><Calendar size={12} /> {exp.period}</span>
+                    <span className="ex-pill"><MapPin size={12} /> {exp.location}</span>
                   </div>
                 </div>
                 <ul className="ex-list">
                   {exp.highlights.map((h, j) => (
-                    <li key={j}><span className="ex-bullet">—</span><span>{h}</span></li>
+                    <li key={j}><span className="ex-bullet">ï¿½</span><span>{h}</span></li>
                   ))}
                 </ul>
                 <div className="ex-stack">

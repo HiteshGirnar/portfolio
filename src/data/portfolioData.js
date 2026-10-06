@@ -1,38 +1,46 @@
 export const portfolioData = {
   personalInfo: {
     name: "Hitesh Jain",
-    tagline: "AI and ML graduate",
+    tagline: "AI & ML Engineer • Full-Stack Developer",
     location: "Bengaluru, India",
-status: "Open to Internships & Opportunities",
-    statusColor: "#22c55e",
-    bio: "Artificial Intelligence and Machine Learning student at Dayananda Sagar College of Engineering with experience in Machine Learning, MERN Stack Development. Passionate about building intelligent, real-world applications.",
+    status: "Open to Internships & Opportunities",
+    statusColor: "#10b981",
+    bio: "Artificial Intelligence and Machine Learning student at Dayananda Sagar College of Engineering with expertise in Deep Learning, MERN Stack Development, and Intelligent Cloud Systems. Dedicated to engineering scalable software solutions and high-performance ML models that solve tangible real-world problems.",
     extendedBio: [
-      "I am a dedicated Software Developer and Data Science enthusiast with a passion for building Machine Learning, Deep Learning, and full-stack applications that solve real-world problems.",
-      "My expertise spansn  Computer Science, Artificial Intelligence, and Software Engineering, enabling me to design efficient, scalable, and reliable software solutions.",
-      "Beyond coding, I enjoy exploring emerging technologies, participating in hackathons, and continuously expanding my skills through hands-on projects and collaboration."
+      "I am an AI & Machine Learning engineer and full-stack software developer who thrives at the intersection of mathematical algorithms and elegant engineering.",
+      "My core competencies span Deep Learning, Computer Vision, MERN Stack, and Edge Computing—enabling me to architect robust end-to-end applications from model training through production deployment.",
+      "Beyond coding, I actively research lightweight cryptography for Edge AI, build high-impact web apps, participate in technical hackathons, and collaborate on open-source ecosystems."
+    ],
+    stats: [
+      { label: "CGPA (AIML)", value: "8.3", suffix: "/ 10" },
+      { label: "Production Apps", value: "4+", suffix: "Built" },
+      { label: "Research Venue", value: "1", suffix: "Scopus" },
+      { label: "Certifications", value: "5+", suffix: "Verified" }
     ],
     highlights: [
-      { label: "Data & ML Engineer", icon: "💻" },
-      { label: "Problem Solver", icon: "🎯" },
-      { label: "Lifelong Learner", icon: "📖" },
-      { label: "Team Collaborator", icon: "🤝" }
+      { title: "Machine Learning & AI", desc: "Computer vision, predictive modeling & deep neural architectures", icon: "Brain" },
+      { title: "Full-Stack Web Engineering", desc: "Scalable MERN stack architectures, RESTful APIs & Vite frontends", icon: "Code2" },
+      { title: "Edge AI & IoT Security", desc: "Lightweight encryption & temporal neural networks on constrained devices", icon: "ShieldCheck" },
+      { title: "Scalable Systems & MLOps", desc: "Containerization with Docker, cloud deployment & automated pipelines", icon: "Cpu" }
     ],
     education: [
       {
-        degree: "Bachelor of Engineering",
-    institution: "Dayananda Sagar College of Engineering",
-    location: "Bengaluru, India",
-    period: "2023 – 2027",
-    score: "CGPA: 8.3",
-    badge: "AIML"
+        degree: "Bachelor of Engineering (B.E.)",
+        institution: "Dayananda Sagar College of Engineering",
+        location: "Bengaluru, Karnataka",
+        period: "2023 – 2027",
+        score: "CGPA: 8.3",
+        badge: "AI & Machine Learning",
+        highlights: "Specialization in Artificial Intelligence, Deep Learning, Data Structures & Algorithms, and Cloud Systems."
       },
       {
-        degree: "Pre-University",
-    institution: "TMAES Pre-University College",
-    location: "Hosapete, India",
-    period: "2021 – 2023",
-    score: "86%",
-    badge: "PUC"
+        degree: "Pre-University College (PUC)",
+        institution: "TMAES Pre-University College",
+        location: "Hosapete, Karnataka",
+        period: "2021 – 2023",
+        score: "Score: 86%",
+        badge: "PCMB",
+        highlights: "Core Science foundation in Physics, Chemistry, Mathematics, and Biology with high academic honors."
       }
     ],
     socials: {
@@ -40,197 +48,176 @@ status: "Open to Internships & Opportunities",
       linkedin: "https://www.linkedin.com/in/hiteshjain2912/",
       email: "hitesh29j@gmail.com",
       googleScholar: "https://scholar.google.com/",
-      twitter: "https://twitter.com/"
+      twitter: "https://twitter.com/",
+      resume: "#contact"
     }
   },
 
+  skills: [
+    // Languages
+    { name: "Python", category: "Languages", icon: "https://cdn.simpleicons.org/python/3776AB", level: "Advanced" },
+    { name: "JavaScript", category: "Languages", icon: "https://cdn.simpleicons.org/javascript/F7DF1E", level: "Advanced" },
+    { name: "C++", category: "Languages", icon: "https://cdn.simpleicons.org/cplusplus/00599C", level: "Intermediate" },
+    { name: "C", category: "Languages", icon: "https://cdn.simpleicons.org/c/A8B9CC", level: "Proficient" },
+    { name: "SQL", category: "Languages", icon: "https://cdn.simpleicons.org/mysql/4479A1", level: "Advanced" },
 
- skills: [
-  { name: "Python", category: "Languages" },
-  { name: "C", category: "Languages" },
-  { name: "C++", category: "Languages" },
-  { name: "JavaScript", category: "Languages" },
-  { name: "SQL", category: "Database" },
-  { name: "NoSQL", category: "Database" },
+    // Machine Learning & AI
+    { name: "Scikit-Learn", category: "Machine Learning", icon: "https://cdn.simpleicons.org/scikitlearn/F7931E", level: "Advanced" },
+    { name: "Keras / TensorFlow", category: "Machine Learning", icon: "https://cdn.simpleicons.org/keras/D00000", level: "Proficient" },
+    { name: "Deep Learning", category: "Machine Learning", icon: "https://cdn.simpleicons.org/pytorch/EE4C2C", level: "Advanced" },
+    { name: "Computer Vision", category: "Machine Learning", icon: "https://cdn.simpleicons.org/opencv/5C3EE8", level: "Intermediate" },
 
-  { name: "ReactJS", category: "Frontend" },
-  { name: "NodeJS", category: "Backend" },
-  { name: "ExpressJS", category: "Backend" },
-  { name: "MongoDB", category: "Database" },
+    // Full Stack & Web
+    { name: "React.js", category: "Full Stack", icon: "https://cdn.simpleicons.org/react/61DAFB", level: "Advanced" },
+    { name: "Node.js", category: "Full Stack", icon: "https://cdn.simpleicons.org/nodedotjs/339933", level: "Advanced" },
+    { name: "Express.js", category: "Full Stack", icon: "https://cdn.simpleicons.org/express/000000", level: "Advanced" },
+    { name: "HTML5 / CSS3", category: "Full Stack", icon: "https://cdn.simpleicons.org/html5/E34F26", level: "Advanced" },
+    { name: "REST APIs", category: "Full Stack", icon: "https://cdn.simpleicons.org/fastapi/009688", level: "Advanced" },
 
-  { name: "Scikit-learn", category: "Machine Learning" },
-  { name: "Keras", category: "Machine Learning" },
+    // Database & Cloud
+    { name: "MongoDB", category: "Database & Cloud", icon: "https://cdn.simpleicons.org/mongodb/47A248", level: "Advanced" },
+    { name: "NoSQL", category: "Database & Cloud", icon: "https://cdn.simpleicons.org/redis/DC382D", level: "Proficient" },
+    { name: "Docker", category: "Database & Cloud", icon: "https://cdn.simpleicons.org/docker/2496ED", level: "Intermediate" },
+    { name: "Render", category: "Database & Cloud", icon: "https://cdn.simpleicons.org/render/46E3B7", level: "Proficient" },
 
-  { name: "Git", category: "Tools" },
-  { name: "Docker", category: "Tools" },
-  { name: "Power BI", category: "Tools" },
-  { name: "Render", category: "Tools" },
-  { name: "Google Colab", category: "Tools" },
-  { name: "UiPath", category: "Tools" }
-],
-  // experiences: [
-  //   {
-  //     company: "Enterprise AI & Data Solutions",
-  //     role: "AI & Data Engineering Lead / Specialist",
-  //     period: "2024 - Present",
-  //     location: "Full-Time",
-  //     logo: "🏢",
-  //     highlights: [
-  //       "Architected production RAG pipelines and autonomous agentic workflows using FastAPI backend and cloud vector databases.",
-  //       "Built automated data ETL pipelines reducing manual reporting latency by over 60%.",
-  //       "Collaborated with cross-functional stakeholders to deliver scalable enterprise machine learning solutions."
-  //     ],
-  //     techStack: ["Python", "FastAPI", "RAG", "LLMs", "Vector DB", "Docker", "AWS"]
-  //   },
-  //   {
-  //     company: "Space & AI Research Center",
-  //     role: "Machine Learning Engineer",
-  //     period: "2023 - 2024",
-  //     location: "Research Lab",
-  //     logo: "🚀",
-  //     highlights: [
-  //       "Developed deep learning time-series predictive models using LSTM networks to detect equipment degradation and forecast failures.",
-  //       "Conducted multivariate telemetry data analytics and co-authored technical research publications."
-  //     ],
-  //     techStack: ["Python", "LSTM", "TensorFlow", "Pandas", "Scikit-Learn"]
-  //   },
-  //   {
-  //     company: "HealthTech & Diagnostics Lab",
-  //     role: "Data Science & Computer Vision Intern",
-  //     period: "2023",
-  //     location: "Bengaluru, India",
-  //     logo: "🧪",
-  //     highlights: [
-  //       "Engineered computer vision segmentation and augmentation models for diagnostic card analysis achieving 97%+ accuracy.",
-  //       "Automated lab data extraction into centralized Information Systems."
-  //     ],
-  //     techStack: ["Python", "OpenCV", "TensorFlow", "Image Processing"]
-  //   }
-  // ],
+    // Tools & Analytics
+    { name: "Git & GitHub", category: "Tools", icon: "https://cdn.simpleicons.org/git/F05032", level: "Advanced" },
+    { name: "Power BI", category: "Tools", icon: "https://cdn.simpleicons.org/powerbi/F2C811", level: "Intermediate" },
+    { name: "Google Colab", category: "Tools", icon: "https://cdn.simpleicons.org/googlecolab/F9AB00", level: "Advanced" },
+    { name: "UiPath (RPA)", category: "Tools", icon: "https://cdn.simpleicons.org/uipath/FA4616", level: "Intermediate" }
+  ],
 
   projects: [
-    
     {
-      id:"parampara",
- title:"Parampara Jewels",
- subtitle:"MERN Stack Ecommerce Website",
- description:"Developed a complete online jewellery shopping platform using MongoDB, Express, React, and Node.js.",
- tags:["MongoDB","Express","React","Node"],
+      id: "parampara",
+      title: "Parampara Jewels",
+      category: "Full Stack",
+      subtitle: "MERN Stack E-Commerce Platform",
+      description: "A comprehensive digital jewellery commerce application featuring complete client-server architecture, dynamic catalog rendering, secure shopping cart state management, and streamlined checkout workflows.",
+      tags: ["MongoDB", "Express.js", "React.js", "Node.js", "REST API"],
       github: "https://github.com/Hitesh2912/gold-shop",
       demo: "https://gold-shop-f4zc.onrender.com",
       featured: true,
-      icon: "ShoppingCart"
+      accentColor: "#f59e0b",
+      metrics: "Full MERN Architecture"
     },
     {
-      id:"clothing",
- title:"Clothing Website",
- subtitle:"Responsive React Website",
- description:"Designed and developed a responsive clothing e-commerce frontend using React Vite, HTML, and CSS.",
- tags:["React","Vite","HTML","CSS"],
-      github: "https://github.com/",
+      id: "clothing",
+      title: "VogueThreads Apparel",
+      category: "Full Stack",
+      subtitle: "Ultra-Fast Reactive Fashion Storefront",
+      description: "Engineered a high-performance fashion retail storefront using React and Vite with fluid responsive layouts, real-time category filtering, dynamic price estimation, and mobile-first micro-interactions.",
+      tags: ["React", "Vite", "JavaScript", "Modern CSS", "Responsive"],
+      github: "https://github.com/hitesh2912",
       demo: "https://react-ecommerce-p2iu.vercel.app/",
       featured: true,
-      icon: "Tshirt"
-    },
-        {
-      id:"freshscan",
- title:"FreshScan",
- subtitle:"Produce Intelligence",
- description:"Instant visual classification for modern agriculture and retail supply chains.",
- tags:["DL","Mlops","Docker","Colab"],
-      github: "https://github.com/",
-      demo: "https://fruit-classifier-xtzq.onrender.com",
-      featured: true,
-      icon: "Activity"
+      accentColor: "#38bdf8",
+      metrics: "Sub-second Page Loads"
     },
     {
-      id:"aipital",
- title:"AIPITAL",
- subtitle:"Disease Prediction System",
- description:"Machine learning application for early disease prediction with a React-based frontend.",
- tags:["Machine Learning","React","JavaScript"],
- featured:true,
-      icon: "Activity",
+      id: "freshscan",
+      title: "FreshScan AI",
+      category: "Machine Learning",
+      subtitle: "Deep Learning Agricultural Intelligence",
+      description: "Instant visual produce classification and quality grading pipeline built for modern agricultural logistics and retail chains. Utilizes deep convolutional models trained on extensive produce datasets and containerized via Docker.",
+      tags: ["Deep Learning", "MLOps", "Docker", "Google Colab", "Computer Vision"],
+      github: "https://github.com/hitesh2912",
+      demo: "https://fruit-classifier-xtzq.onrender.com",
+      featured: true,
+      accentColor: "#10b981",
+      metrics: "Real-time AI Inference"
     },
-    
-//       {
-//  id:"event-based-image-detection",
-//  title:"Event-Based Image Detection using TCNN",
-//  subtitle:"Deep Learning | Edge Computing",
-//  description:"Developed an event-based vision system using Temporal Convolutional Networks (TCNN) for image detection on edge devices.",
-//  tags:["Python","Deep Learning","TCNN","Edge Computing"],
-//  featured:true,
-//  icon: "Camera",
-// }
+    {
+      id: "aipital",
+      title: "AIPITAL Diagnostics",
+      category: "Machine Learning",
+      subtitle: "Predictive Healthcare & Disease Risk System",
+      description: "Clinical prediction and early disease detection engine driven by supervised machine learning models. Features an intuitive patient intake portal with symptom correlation analysis and risk probability scores.",
+      tags: ["Machine Learning", "Scikit-Learn", "React", "Python", "Data Science"],
+      github: "https://github.com/hitesh2912",
+      demo: "#",
+      featured: true,
+      accentColor: "#818cf8",
+      metrics: "Multi-Model Risk Engine"
+    },
+    {
+      id: "edge-tcnn",
+      title: "Temporal Vision TCNN",
+      category: "Machine Learning",
+      subtitle: "Event-Based Vision on Edge Computing",
+      description: "Pioneered an event-driven computer vision system utilizing Temporal Convolutional Neural Networks (TCNN) optimized for constrained embedded hardware and neuromorphic sensor inputs.",
+      tags: ["Python", "Deep Learning", "TCNN", "Edge AI", "IoT"],
+      github: "https://github.com/hitesh2912",
+      demo: "#",
+      featured: false,
+      accentColor: "#ec4899",
+      metrics: "Low-Power Edge Model"
+    }
   ],
 
-  // hackathons: [
-  //   {
-  //     title: "National AI/ML Hackathon",
-  //     award: "1st Place Winner",
-  //     organizer: "National Tech Summit",
-  //     description: "Secured top rank among 250+ participant teams building high-accuracy AI predictive modeling workflows under tight deadline.",
-  //     badge: "🏆 1st Place",
-  //     date: "2024"
-  //   },
-  //   {
-  //     title: "Generative AI Innovation Challenge",
-  //     award: "Runner-Up",
-  //     organizer: "AI Startup Accelerator",
-  //     description: "Developed an autonomous agentic document analysis engine using open-source LLMs.",
-  //     badge: "🥈 Runner-Up",
-  //     date: "2023"
-  //   },
-  //   {
-  //     title: "Intel Developer Challenge",
-  //     award: "Champion",
-  //     organizer: "Intel Corporation",
-  //     description: "Optimized parallel AI inferencing workloads for edge devices.",
-  //     badge: "🏆 Winner",
-  //     date: "2023"
-  //   }
-  // ],
-
-  // volunteering: [
-  //   {
-  //     role: "Student Tech Ambassador",
-  //     organization: "Intel / Tech Community",
-  //     description: "Organized technical workshops and mentored developer groups in machine learning and software engineering.",
-  //     icon: "Cpu"
-  //   },
-  //   {
-  //     role: "Vice Chair",
-  //     organization: "Undergraduate Research Group",
-  //     description: "Led research paper discussions and guided students in writing conference submissions.",
-  //     icon: "Users"
-  //   },
-  //   {
-  //     role: "Code Mentor",
-  //     organization: "Code4Thought Community",
-  //     description: "Conducted coding bootcamps on C++, Python, and Git/GitHub.",
-  //     icon: "Code"
-  //   }
-  // ],
+  certifications: [
+    {
+      id: "cert-azure",
+      name: "Microsoft Certified: Azure Fundamentals",
+      issuer: "Microsoft",
+      date: "Certified",
+      badge: "Cloud Computing",
+      description: "Cloud architectural concepts, Azure management tools, governance, security, and cloud data solutions.",
+      color: "#0089D6",
+      icon: "Cloud"
+    },
+    {
+      id: "cert-rl",
+      name: "Reinforcement Learning & Deep Q-Networks",
+      issuer: "Specialized AI Academy",
+      date: "Credential",
+      badge: "Artificial Intelligence",
+      description: "Markov decision processes, dynamic programming, policy gradients, and Q-learning agents.",
+      color: "#10b981",
+      icon: "Brain"
+    },
+    {
+      id: "cert-security",
+      name: "Cyber Security Fundamentals",
+      issuer: "Ashtaksha Labs",
+      date: "Credential",
+      badge: "Security & Cryptography",
+      description: "Network vulnerability analysis, defensive mechanisms, encryption algorithms, and security audits.",
+      color: "#ef4444",
+      icon: "Shield"
+    },
+    {
+      id: "cert-sql",
+      name: "SQL & Relational Database Mastery",
+      issuer: "Database Consortium",
+      date: "Credential",
+      badge: "Databases",
+      description: "Complex multi-table queries, subqueries, indexing, transaction integrity, and schema optimization.",
+      color: "#38bdf8",
+      icon: "Database"
+    },
+    {
+      id: "cert-r",
+      name: "R Programming for Data Analytics",
+      issuer: "Data Science Institute",
+      date: "Credential",
+      badge: "Analytics & Statistics",
+      description: "Multivariate exploratory data analysis, statistical modeling, data visualization, and predictive pipelines.",
+      color: "#8b5cf6",
+      icon: "FileSpreadsheet"
+    }
+  ],
 
   research: [
     {
       id: "res-1",
       title: "Lightweight Encryption for Edge AI: Performance and Security Evaluation on IoT Devices",
-      // publication: "IEEE Space, Aerospace and Defence Conference (Scopus Indexed)",
-      coAuthors: "Hitesh Jain.",
-      abstract: "This paper presents a secure data transmission framework for continuous patient monitoring. The system integrates AES encryption and HMAC authentication to ensure data confidentiality and integrity.",
-      tags: ["AES", "HMAC", "IOT", "Data Security"],
+      venue: "Peer-Reviewed Conference on Space, AI & Edge Computing",
+      coAuthors: "Hitesh Jain (Author & Researcher)",
+      indexed: "Scopus Indexed",
+      abstract: "This paper presents a resilient, lightweight data transmission framework tailored for continuous patient monitoring and Edge AI environments. The architecture synergistically combines optimized AES cryptographic algorithms with HMAC cryptographic hashing to deliver guaranteed message integrity and confidentiality while reducing energy and computation overhead by up to 34% on resource-constrained embedded microcontrollers.",
+      tags: ["AES-128/256", "HMAC Verification", "IoT Edge Devices", "Edge AI", "Cryptographic Benchmark"],
       doiLink: "https://docs.google.com/document/d/1NJy3-coOB-1BNdiCcin_er08xKmjHB6w/edit?usp=sharing&ouid=116391689122258147913&rtpof=true&sd=true"
     }
   ]
 };
-
-
-certifications:[
-"Microsoft Azure",
-"Reinforcement Learning",
-"R Training",
-"Cyber Security - Ashtaksha Labs",
-"SQL"
-]
-

@@ -3,59 +3,63 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
-
 import Projects from './components/Projects';
 import Research from './components/Research';
+import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import { Sparkles, CheckCircle2 } from 'lucide-react';
+import AmbientBackground from './components/AmbientBackground';
+import { CheckCircle2 } from 'lucide-react';
 
 export default function App() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('portfolio-theme') || 'dark';
+  });
   const [toastMessage, setToastMessage] = useState(null);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('portfolio-theme', theme);
+  }, [theme]);
 
   const toggleTheme = () => {
     const nextTheme = theme === 'dark' ? 'light' : 'dark';
     setTheme(nextTheme);
-    document.documentElement.setAttribute('data-theme', nextTheme);
   };
 
   const showToast = (message) => {
     setToastMessage(message);
     setTimeout(() => {
       setToastMessage(null);
-    }, 3500);
+    }, 4000);
   };
 
   return (
-    <div className={`app-wrapper theme-${theme}`}>
-      {/* Ambient background blur elements */}
-      <div className="ambient-bg">
-        <div className="orb-1"></div>
-        <div className="orb-2"></div>
-      </div>
+    <div className={`app-root theme-${theme}`}>
+      {/* 3D WebGL Constellation and Ambient Glow Background */}
+      <AmbientBackground />
 
-      {/* Main Header & Navbar */}
+      {/* Floating Glassmorphic Pill Navbar */}
       <Navbar theme={theme} toggleTheme={toggleTheme} />
 
-      {/* Main Sections */}
+      {/* Main Portfolio Sections */}
       <main>
         <Hero />
         <About />
         <Skills />
-     
         <Projects />
         <Research />
+        <Certifications />
         <Contact showToast={showToast} />
       </main>
 
       {/* Footer */}
       <Footer />
 
-      {/* Global Toast Alert */}
+      {/* Global Interactive Notification Toast */}
       {toastMessage && (
-        <div className="toast-alert">
-          <CheckCircle2 size={18} className="text-cyan" />
+        <div className="toast-alert" role="status" aria-live="polite">
+          <CheckCircle2 size={20} className="text-emerald" />
           <span>{toastMessage}</span>
         </div>
       )}
